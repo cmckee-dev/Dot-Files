@@ -35,8 +35,12 @@ set history=1000
 set number
 set relativenumber
 
+set expandtab tabstop=2 shiftwidth=2
+
+" NERDtree aka file-tree keybind
 map <C-n> :NERDTreeToggle<CR>
 
+" Copy and Paste
 map <Leader>y "+y
 map <Leader>d "+d
 map <Leader>p "+p
