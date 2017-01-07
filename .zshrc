@@ -17,7 +17,7 @@
 
 export ZSH=/Users/cmckee/.oh-my-zsh
 
-ZSH_THEME="gallois"
+ZSH_THEME="avit"
 
 plugins=(git)
 
@@ -31,10 +31,19 @@ source /usr/local/share/chruby/auto.sh
 
 
 # File Aliases
-alias zshrc="vim ~/.zshrc"
-alias szsh="source ~/.zshrc"
-alias vimrc="vim ~/.vimrc"
-alias svim="source ~/.vimrc"
-alias tmuxconf="vim ~/.tmux.conf"
-alias stmux="source ~/.tmux.conf"
+alias zshrc = "vim ~/.zshrc"
+alias szsh = "source ~/.zshrc"
+alias vimrc = "vim ~/.vimrc"
+alias svim = "source ~/.vimrc"
+alias tmuxconf = "vim ~/.tmux.conf"
+alias stmux = "source ~/.tmux.conf"
 
+# Ruby Install
+alias ruby-install-mirror = "ruby-install -M https://cache.ruby-lang.org/pub/ruby/"
+
+# Exercism CLI aliases
+alias xercli = "exercism"
+
+# Git Aliases
+alias sshow = "!f() { git stash show stash^{/$*} -p; }; f"
+alias aapply = "!f() { git stash apply stash^{/$*}; }; f"
