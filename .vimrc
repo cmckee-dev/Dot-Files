@@ -49,3 +49,6 @@ map <Leader>P "+P
 set laststatus=2
 let g:airline_powerline_fonts = 1
 let g:airline_theme='distinguished'
+
+let g:NERDTreeWinSize = 40
+let NERDTreeShowHidden=1
