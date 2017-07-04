@@ -12,37 +12,28 @@
 #: Website 	      https://www.cmckee-dev.com
 #: Description    Zsh configuration file
 
-# Path to your oh-my-zsh installation.
+# Path 
 
-export ZSH=/Users/cmckee/.oh-my-zsh
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# Zsh configuration
 
 ZSH_THEME="avit"
-
 plugins=(git)
 
-# User configuration
-
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.bin/"
-
+export ZSH=/home/cmckee/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
-source /usr/local/share/chruby/chruby.sh
-source /usr/local/share/chruby/auto.sh
-
 
 # File Aliases
-alias zshrc = "vim ~/.zshrc"
-alias szsh = "source ~/.zshrc"
-alias vimrc = "vim ~/.vimrc"
-alias svim = "source ~/.vimrc"
-alias tmuxconf = "vim ~/.tmux.conf"
-alias stmux = "source ~/.tmux.conf"
 
-# Ruby Install
-alias ruby-install-mirror = "ruby-install -M https://cache.ruby-lang.org/pub/ruby/"
-
-# Exercism CLI aliases
-alias xercli = "exercism"
+alias zshrc="vim ~/.zshrc"
+alias szsh="source ~/.zshrc"
+alias vimrc="vim ~/.vimrc"
+alias svim="source ~/.vimrc"
+alias tmuxconf="vim ~/.tmux.conf"
+alias stmux="source ~/.tmux.conf"
 
 # Git Aliases
-alias sshow = "!f() { git stash show stash^{/$*} -p; }; f"
-alias aapply = "!f() { git stash apply stash^{/$*}; }; f"
+
+alias sshow="!f() { git stash show stash^{/$*} -p; }; f"
+alias aapply="!f() { git stash apply stash^{/$*}; }; f"
