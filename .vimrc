@@ -14,10 +14,10 @@
 "      'V/'   ++++++
 "               ++
 "
-": Author 	Curtis Mckee
-": Description 	.tmux.conf configuration file
-": Email 	cmckee.dev@gmail.com
-": OS 		Mac OSX El Capitan 10.11, Mac OSX Sierra 10.12.1
+": Author 	    Curtis Mckee
+": Email 	      cmckee.dev@gmail.com
+": Website      https://cmckee-dev.com
+": Description 	Vim configuration file
 
 
 execute pathogen#infect()

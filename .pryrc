@@ -10,9 +10,9 @@
 # | '--------------' || '--------------' || '--------------' |
 #  '----------------'  '----------------'  '----------------' 
 
-
 #: Author       Curtis Mckee
 #: Email        cmckee.dev@gmail.com
+#: Website      https://cmckee-dev.com
 #: Description  Pry configuration file
 
 Pry.config.editor = "vim"

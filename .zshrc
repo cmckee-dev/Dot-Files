@@ -8,10 +8,9 @@
 ############################################################
 
 #: Author         Curtis Mckee
-#: Description    .zshrc configuration file
 #: Email          cmckee.dev@gmail.com
-#: Website 	  http://www.cmckee-dev.com
-#: OS             Mac OSX El Capitan 10.11, Mac OSX Sierra 10.12.1
+#: Website 	      https://www.cmckee-dev.com
+#: Description    Zsh configuration file
 
 # Path to your oh-my-zsh installation.
 
