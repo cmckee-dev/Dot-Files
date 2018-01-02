@@ -1,0 +1,17 @@
+#!/bin/bash
+
+repos=(
+  "/home/cmckee/Development/example"
+)
+
+echo "Checking" ${#repos[@]} "repositories for updates"
+
+for repo in "${repos[@]}"
+do
+  echo "updating" ${repo}
+  cd "${repo}"
+  git checkout master
+  git pull
+done
+
+cd ~
