@@ -52,3 +52,7 @@ let g:airline_theme='distinguished'
 
 let g:NERDTreeWinSize = 40
 let NERDTreeShowHidden=1
+
+set hlsearch
+hi Search ctermbg=NONE
+hi Search ctermfg=NONE
