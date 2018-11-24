@@ -1,0 +1,137 @@
+;==========================================================
+;
+;
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;
+;
+;   To learn more about how to configure Polybar
+;   go to https://github.com/jaagr/polybar
+;
+;   The README contains alot of information
+;
+;==========================================================
+
+[colors]
+background = #282828
+background-alt = #3C3836
+foreground = #EBDBB2
+foreground-alt = #689d6a
+primary = #fff
+secondary = #EBDBB2
+alert = #fff
+
+white = #fff
+black = #000
+
+[bar/main]
+;monitor = ${env:MONITOR:HDMI-1}
+width = 1800
+height = 32
+offset-x = 60
+offset-y = 25
+; radius = 5
+fixed-center = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 5
+line-color = #f00
+
+border-size = 1
+border-color = ${colors.background-alt}
+
+padding-left = 5
+padding-right = 5
+
+module-margin-left = 1
+module-margin-right = 2
+
+font-0 = fixed:pixelsize=10;1
+font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-2 = siji:pixelsize=10;1
+font-3 = cryptocoins:style=Regular;0
+
+modules-left = ewmh
+modules-center = crypto
+modules-right = pulseaudio battery
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+[module/ewmh]
+type = internal/xworkspaces
+pin-workspaces = true
+enable-click = false
+enable-scroll = false
+label-active-foreground = ${colors.foreground}
+label-active-background = ${colors.background}
+label-active-underline = ${colors.foreground}
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:30:...%
+
+[module/crypto]
+type = custom/script
+interval = 120
+exec = python3 -W ignore /home/cmckee/.config/polybar/crypto.py
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+format-volume = <label-volume> <bar-volume>
+label-volume = VOL %percentage%% 
+label-volume-foreground = ${root.foreground}
+
+label-muted = muted
+label-muted-foreground = #666
+
+bar-volume-width = 10
+bar-volume-foreground-0 = #55aa55
+bar-volume-foreground-1 = #55aa55
+bar-volume-foreground-2 = #55aa55
+bar-volume-foreground-3 = #55aa55
+bar-volume-foreground-4 = #55aa55
+bar-volume-foreground-5 = #f5a70a
+bar-volume-foreground-6 = #ff5555
+bar-volume-gradient = false
+bar-volume-indicator = ||
+bar-volume-indicator-font = 2
+bar-volume-fill = ─
+bar-volume-fill-font = 2
+bar-volume-empty = ─
+bar-volume-empty-font = 2
+bar-volume-empty-foreground = ${colors.foreground-alt}
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = AC
+full-at = 98
+
+label-charging = Charging %percentage%%
+format-charging = <label-charging>
+format-charging-underline = ${colors.secondary}
+
+label-discharging = Discharging %percentage%%
+format-discharging = <label-discharging>
+format-discharging-underline = ${self.format-charging-underline}
+
+label-full = Fully charged
+format-full-prefix-foreground = ${colors.foreground-alt}
+format-full-underline = ${self.format-charging-underline}
+
+[settings]
+screenchange-reload = true
+
+[global/wm]
+margin-top = 2
+margin-bottom = 2
+
+; vim:ft=dosini
