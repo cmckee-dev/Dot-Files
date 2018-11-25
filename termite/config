@@ -1,5 +1,5 @@
 [options] 
-font = Ubuntu Mono derivative Powerline Regular 14
+font = Hack Nerd Font Mono 10
 fullscreen = true 
 icon_name = terminal 
 scrollback_lines = 10000 

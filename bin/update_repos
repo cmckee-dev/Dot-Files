@@ -1,7 +1,7 @@
 #!/bin/bash
 
 repos=(
-  "/home/cmckee/Development/example"
+  "/home/cmckee/Development/example-repo"
 )
 
 echo "Checking" ${#repos[@]} "repositories for updates"

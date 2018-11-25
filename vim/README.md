@@ -1,8 +1,8 @@
 ### **Quick Plugin Installation:**
 
-`wget https://github.com/cmckee-dev/dotfiles/vim/install.sh`
-`chmod +x ./install.sh`
-`./install.sh`
+`wget https://github.com/cmckee-dev/dotfiles/vim/plugin-install.sh`
+`chmod +x ./plugin-install.sh`
+`./plugin-install.sh`
 
 ### **Vim plugin managment:**
 
