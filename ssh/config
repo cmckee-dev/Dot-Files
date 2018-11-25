@@ -1,0 +1,6 @@
+Host home-server
+    Hostname 10.0.0.1
+    User cmckee
+    Port 3000
+    ForwardAgent yes
+    IdentityFile ~/.ssh/id_rsa
