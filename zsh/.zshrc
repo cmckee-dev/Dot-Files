@@ -12,28 +12,23 @@
 #: Website 	      https://www.cmckee-dev.com
 #: Description    Zsh configuration file
 
-# Path 
-
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-# Zsh configuration
 
 ZSH_THEME="avit"
-plugins=(git)
 
-export ZSH=/home/cmckee/.oh-my-zsh
+source $HOME/.exports
+
 source $ZSH/oh-my-zsh.sh
 
-# File Aliases
+source $HOME/.aliases/docker.zsh
+source $HOME/.aliases/git.zsh
+source $HOME/.aliases/golang.zsh
+source $HOME/.aliases/ruby.zsh
+source $HOME/.aliases/ruby.zsh
+source $HOME/.aliases/unix.zsh
+source $HOME/.aliases/vim.zsh
 
-alias zshrc="vim ~/.zshrc"
-alias szsh="source ~/.zshrc"
-alias vimrc="vim ~/.vimrc"
-alias svim="source ~/.vimrc"
-alias tmuxconf="vim ~/.tmux.conf"
-alias stmux="source ~/.tmux.conf"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
-# Git Aliases
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
 
-alias sshow="!f() { git stash show stash^{/$*} -p; }; f"
-alias aapply="!f() { git stash apply stash^{/$*}; }; f"
