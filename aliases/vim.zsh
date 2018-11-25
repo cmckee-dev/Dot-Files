@@ -1,0 +1,6 @@
+alias conkyrc="vim ~/.conkyrc"
+alias vimrc="vim ~/.vimrc"
+alias zshrc="vim ~/.zshrc"
+alias tmuxconf="vim ~/.tmux.conf"
+alias termconf="vim ~/.config/termite/config"
+alias polyconf="vim ~/.config/polybar/config"
