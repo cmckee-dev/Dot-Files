@@ -1,3 +1,7 @@
+# Docker Aliases
+alias dockrmi='docker rmi $(docker images -q -f dangling=true)'
+
+# Git Aliases
 git_current_branch () {
         local ref
         ref=$(command git symbolic-ref --quiet HEAD 2> /dev/null) 
@@ -55,3 +59,27 @@ alias gstc='git stash clear'
 
 alias gs='git status'
 
+# Golang Aliases
+alias gop='cd $GOPATH'
+alias gopb='cd $GOPATH/bin'
+alias gops='cd $GOPATH/src'
+alias gopcmd='cd $GOPATH/src/github.com/cmckee-dev'
+
+# Ruby Aliases
+alias rubies='rvm list'
+alias gemsets='rvm gemset list'
+
+# Unix Aliases
+alias ag='sudo apt-get'
+alias agi='sudo apt-get install'
+alias agp='sudo apt-get --purge remove'
+alias agu='sudo apt-get update'
+alias agud='sudo apt-get update'
+
+# Vim Aliases
+alias conkyrc="vim ~/.conkyrc"
+alias vimrc="vim ~/.vimrc"
+alias zshrc="vim ~/.zshrc"
+alias tmuxconf="vim ~/.tmux.conf"
+alias termconf="vim ~/.config/termite/config"
+alias polyconf="vim ~/.config/polybar/config"

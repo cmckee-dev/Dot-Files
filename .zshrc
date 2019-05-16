@@ -12,23 +12,15 @@
 #: Website 	      https://www.cmckee-dev.com
 #: Description    Zsh configuration file
 
-
 ZSH_THEME="avit"
 
 source $HOME/.exports
 
 source $ZSH/oh-my-zsh.sh
 
-source $HOME/.aliases/docker.zsh
-source $HOME/.aliases/git.zsh
-source $HOME/.aliases/golang.zsh
-source $HOME/.aliases/ruby.zsh
-source $HOME/.aliases/ruby.zsh
-source $HOME/.aliases/unix.zsh
-source $HOME/.aliases/vim.zsh
+source $HOME/.aliases.zsh
 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
-
