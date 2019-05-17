@@ -1,5 +1,0 @@
-alias ag='sudo apt-get'
-alias agi='sudo apt-get install'
-alias agp='sudo apt-get --purge remove'
-alias agu='sudo apt-get update'
-alias agud='sudo apt-get update'
