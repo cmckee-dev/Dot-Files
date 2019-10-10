@@ -16,9 +16,8 @@
 "
 ": Author 	    Curtis Mckee
 ": Email 	      cmckee.dev@gmail.com
-": Website      https://cmckee-dev.com
+": Website      https://blog.curtis-mckee.com
 ": Description 	Vim configuration file
-
 
 execute pathogen#infect()
 
@@ -35,8 +34,18 @@ set encoding=utf-8
 set history=1000
 set laststatus=2
 
+" Line numbers
+set nu
+
 " Indentation
 set tabstop=2 shiftwidth=2 expandtab autoindent smartindent
+
+" 80 Character indicator
+highlight ColorColumn ctermbg=0
+set colorcolumn=80
+
+" Word Wrap
+set nowrap
 
 " Theme
 colorscheme gruvbox
@@ -74,12 +83,14 @@ let g:ctrlp_max_depth=40
 let g:indentLine_char = '┆'
 let g:indentLine_color_term = 239
 
+" Code Linter
+let g:airline#extensions#ale#enabled = 1 
+let g:ale_sign_column_always = 1
+let g:ale_set_highlights = 0 
+
 " Vim Autocomplete
 let g:ycm_add_preview_to_completeopt = 0
 let g:ycm_autoclose_preview_window_after_completion=1
-
-" Vim ALE Syntax and Linting
-let g:ale_fixers = { 'javascript': ['eslint'] }
 
 " Vim-Go
 let g:go_highlight_functions = 1
@@ -88,7 +99,3 @@ let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:go_fmt_command = "goimports"
-
-" Vim Javascript & React
-let g:javascript_plugin_jsdoc = 1
-
