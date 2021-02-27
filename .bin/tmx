@@ -1,5 +1,4 @@
 #!/bin/sh
-#
 # Attach or create tmux session named the same as current directory.
 
 path_name="$(basename "$PWD" | tr . -)"
