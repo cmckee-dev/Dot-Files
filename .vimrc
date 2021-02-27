@@ -1,7 +1,6 @@
 "      ________ ++     ________
 "     /VVVVVVVV\++++  /VVVVVVVV\
-"     \VVVVVVVV/++++++\VVVVVVVV/
-"      |VVVVVV|++++++++/VVVVV/'
+"     \VVVVVVVV/++++++\VVVVVVVV/ "      |VVVVVV|++++++++/VVVVV/'
 "      |VVVVVV|++++++/VVVVV/'
 "     +|VVVVVV|++++/VVVVV/'+
 "   +++|VVVVVV|++/VVVVV/'+++++
@@ -16,7 +15,7 @@
 "
 ": Author 	    Curtis Mckee
 ": Email 	      cmckee.dev@gmail.com
-": Website      https://blog.curtis-mckee.com
+": Website      https://curtis-mckee.com
 ": Description 	Vim configuration file
 
 execute pathogen#infect()
@@ -57,16 +56,6 @@ set hlsearch
 hi Search ctermbg=NONE
 hi Search ctermfg=NONE
 
-" Copy and Paste
-map <Leader>y "+y
-map <Leader>d "+d
-map <Leader>p "+p
-map <Leader>P "+P
-
-" Powerline and Airline
-let g:airline_powerline_fonts = 1
-let g:airline_theme= 'gruvbox'
-
 " Nerdtree
 map <C-n> :NERDTreeToggle<CR>
 let g:NERDTreeWinSize = 40
@@ -82,20 +71,3 @@ let g:ctrlp_max_depth=40
 " Indent Guides
 let g:indentLine_char = '┆'
 let g:indentLine_color_term = 239
-
-" Code Linter
-let g:airline#extensions#ale#enabled = 1 
-let g:ale_sign_column_always = 1
-let g:ale_set_highlights = 0 
-
-" Vim Autocomplete
-let g:ycm_add_preview_to_completeopt = 0
-let g:ycm_autoclose_preview_window_after_completion=1
-
-" Vim-Go
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_structs = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_build_constraints = 1
-let g:go_fmt_command = "goimports"

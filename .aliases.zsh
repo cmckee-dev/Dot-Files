@@ -1,10 +1,7 @@
 #: Author:        Curtis Mckee
 #: Email:         cmckee.dev@gmail.com
-#: Website:       https://blog.curtis-mckee.com
+#: Website:       https://curtis-mckee.com
 #: Description:   Command line shortcuts
-
-# Docker Aliases
-alias dockrmi='docker rmi $(docker images -q -f dangling=true)'
 
 # Git Aliases
 git_current_branch () {
@@ -64,27 +61,7 @@ alias gstc='git stash clear'
 
 alias gs='git status'
 
-# Golang Aliases
-alias gop='cd $GOPATH'
-alias gopb='cd $GOPATH/bin'
-alias gops='cd $GOPATH/src'
-alias gopcmd='cd $GOPATH/src/github.com/cmckee-dev'
-
-# Linux Aliases
-alias ag='sudo apt-get'
-alias agi='sudo apt-get install'
-alias agp='sudo apt-get --purge remove'
-alias agu='sudo apt-get update'
-alias agud='sudo apt-get update'
-
-# Ruby Aliases
-alias rubies='rvm list'
-alias gemsets='rvm gemset list'
-
 # Vim File Aliases
-alias aliases="vim ~/.aliases.zsh"
-alias conkyrc="vim ~/.conkyrc"
-alias termconf="vim ~/.config/termite/config"
 alias tmuxconf="vim ~/.tmux.conf"
 alias vimrc="vim ~/.vimrc"
 alias zshrc="vim ~/.zshrc"

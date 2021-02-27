@@ -1,6 +1,13 @@
 [user]
-  name = Curtis Mckee
+	name = Curtis Mckee
 	email = cmckee.dev@gmail.com
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore_global
+[init]
+	defaultBranch = main
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
